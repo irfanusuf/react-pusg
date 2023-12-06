@@ -1,0 +1,13 @@
+
+.footer-dark {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    height: 50px;
+}
+
+
+.footer-light {
+    background-color: rgb(255, 255, 255);
+
+    height: 50px;
+}

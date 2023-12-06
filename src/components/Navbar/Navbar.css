@@ -1,0 +1,148 @@
+.light-nav {
+    display: flex;
+    background-color: rgb(239, 234, 234);
+
+    
+    height: 70px;
+}
+
+
+.dark-nav {
+   display: flex;
+   background-color: black;
+   color:aliceblue;
+   height: 70px;
+}
+
+
+nav ul {
+
+   display: flex;
+   list-style-type: none;
+   margin-left: 100px ;
+}
+
+
+nav li {
+   margin-left: 50px ;
+   font-size: 22px;
+   transition: all 0.3s ease-in-out;
+  
+}
+ nav li:hover {
+   transform: scale(1.1);
+ }
+  nav span{
+   position: absolute;
+   top: 10px;
+   left: 40px;
+   color: red;
+   font-size: 46px;
+   font-weight: 900;
+   transition: all 0.5s ease-in-out;
+ }
+
+ nav span:hover{
+   transform: scale(1.1);
+ }
+
+
+.nav-li {
+   text-decoration: none;
+   color: black;
+   transition: all 0.3s ease-in-out;
+}
+
+
+.nav-li-dark{
+   text-decoration: none;
+   color: rgb(226, 221, 221);
+   transition: all 0.3s ease-in-out;
+}
+
+.nav-li-dark:hover  {
+  
+   color: rgb(204, 60, 60);
+}
+
+.nav-li:hover  {
+  
+   color: rgb(204, 60, 60);
+}
+
+form{ 
+   position: absolute;
+   right:20px;
+   top: 25px;
+    
+}
+
+
+form input {
+   background-color: rgba(250, 235, 215, 0.233);
+   width: 300px;
+   margin-right: 10px;
+   font-size: 16px;
+   padding: 2px 10px;
+   border: 1px solid wheat ;
+   box-shadow: 2px 2px 10px black;
+   border-radius: 5px;
+   transition: all 0.5s ease-in;
+}
+
+form input:hover{
+   transform: scale(1.05);
+   box-shadow: 2px 2px 10px red;
+}
+
+
+
+form button {
+   background-color: rgba(250, 235, 215, 0.233);
+   margin-left: 10px;
+   border-radius: 5px;
+   transition: all 0.5s ease-in;
+   width: 80px;
+   padding: 2px 5px;
+   font-size: 16px;
+}
+
+form button:hover{
+   transform: scale(1.05);
+   box-shadow: 2px 2px 10px red;
+}
+
+
+
+.btn-dark-mode {
+   background-color: rgba(250, 235, 215, 0.233);
+   margin-left: 100px;
+   border-radius: 5px;
+   transition: all 0.5s ease-in;
+   width: 100px;
+   padding: 2px 5px;
+   font-size: 16px;
+   height: 40px;
+   margin-top: 10px;
+}
+
+.btn-dark-mode:hover{
+   transform: scale(1.05);
+   box-shadow: 2px 2px 10px red;
+}
+
+
+@media only screen and (max-width: 800px) {
+   nav ul {
+      display: block;
+      position: absolute;
+      top: 50px;
+      left: 60px;
+   }
+
+
+   nav { 
+      height: 200px;
+   }
+   
+ }

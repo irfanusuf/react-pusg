@@ -6,7 +6,7 @@ const Footer = (props) => {
     return (
         <div>
             <footer className={props.divName}>
-                TRhid is my footer
+               PUSG All Rights Reserved 2023 
             </footer>
 
         </div>

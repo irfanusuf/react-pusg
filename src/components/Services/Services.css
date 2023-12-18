@@ -1,16 +1,43 @@
 
-.main-div{
+.main-div-light{
      height: 80vh ;
+    
 }
 
 
-h1{
-    text-align: center;
+
+.main-div-dark{
+    height: 80vh ;
+    background-color: black;
+
 }
 
 
-p {
-    text-align: center
+.center-section {
+    background-image: url(../../assets/game\ \(2\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 73vh;
+    font-size: 40px;
+    justify-content: center;
+    display: flex;
+    padding-top: 50px;
+    opacity: 0.9;
 }
+
+
+.center-section-dark {
+    background-image: url(../../assets/game\ \(2\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 73vh;
+    font-size: 40px;
+    justify-content: center;
+    display: flex;
+    padding-top: 50px;
+    opacity: 0.5    ;
+}
+
+
 
 

@@ -1,0 +1,42 @@
+
+.gallery h1 {
+
+    color:red;
+}
+
+
+.cards {
+
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.card {
+margin: 10px;
+flex:  0 0 30%;
+}
+
+
+.cards img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cards p {
+    text-align: center;
+}
+
+
+
+.error-message p  {
+
+color: red;
+font-size: larger;
+text-align: center;
+}
+
+

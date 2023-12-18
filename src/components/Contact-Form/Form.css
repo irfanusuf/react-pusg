@@ -1,0 +1,40 @@
+.Form {
+
+width: 600px;
+margin: auto;
+height: 200px;
+background-color: antiquewhite;
+border: green 2px solid;
+border-radius: 10px;
+}
+
+
+
+.contact-form {
+    margin: auto;
+   width: 400px;
+ 
+   
+
+}
+
+
+.contact-form input {
+
+width: 400px;
+font-size: 18px;
+border: 1px solid rgb(11, 12, 12);
+border-radius: 5px;
+margin-top: 10px;
+
+
+}
+
+.contact-form textarea {
+    width: 400px;
+    font-size: 18px;
+    border: 1px solid rgb(11, 12, 12);
+    border-radius: 5px;
+    margin-top: 10px;
+
+}

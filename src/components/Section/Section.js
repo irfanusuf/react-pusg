@@ -3,18 +3,12 @@ import "./Section.css";
 
 const Section = (props) => {
     return (
-        <div className='section'>
 
-            <div className='central'>
-
+        <div className={props.central}>
+            <div className={props.section}>
                 <h1> Welocme {props.user}</h1>
-
-                
-                <h2>To the advanced level of gaming </h2> 
-
+                <h2>To the advanced level of gaming </h2>
             </div>
-
-
         </div>
     )
 }

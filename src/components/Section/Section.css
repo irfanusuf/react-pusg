@@ -1,30 +1,58 @@
+
+
+
 .section {
+
     background-image: url(../../assets/game\ \(1\).jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 1600px;
+    width: 100%;
     height: 80vh;
+    opacity: 0.9;
+
 }
+
+.section-dark {
+
+    background-image: url(../../assets/game\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    opacity: 0.4;
+
+}
+
 
 .central {
-    display: flex;
+   
+    background-color: black;
+}
+
+.central-dark {
+
+ background-color: black;
+ 
+
 
 }
 
 
-.central h1 {
-    display: flex;
+
+ h1 {
+    
     color: antiquewhite;
     margin-left: 100px;
     font-size: 60px;
+    margin-top: 0px;
+    padding-top: 50px;
 
 
 }
 
-.central h2 {
-    margin-top: 150px;
+ h2 {
+    margin-top: 30px;
     color: rgb(255, 255, 255);
-    position: absolute;
-    top: 100px;
-    left: 100px;
     font-size: 50px;
+    margin-left: 100px;
 }

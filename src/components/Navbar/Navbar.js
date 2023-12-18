@@ -19,9 +19,12 @@ const Navbar = (props) => {
           <li> <Link className={props.divLi} to='/'>{props.link1}</Link> </li>
           <li> <Link className={props.divLi} to='/services'>{props.link2}</Link> </li>
           <li> <Link className={props.divLi } to='/contact'>{props.link3}</Link> </li>
-          <li> <Link className={props.divLi} to='/about'>{props.link4}</Link> </li>
+          <li> <Link className={props.divLi} to='/Gallery'>{props.link4}</Link> </li>
         </ul>
-        <form method='post'>
+
+
+
+        <form className='nav-form' method='post'>
           <input placeholder='search' required />
           <button type='submit'> Search </button>
         </form>

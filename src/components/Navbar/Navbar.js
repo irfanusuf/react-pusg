@@ -16,10 +16,12 @@ const Navbar = (props) => {
       <nav className={props.divName}>
         <span> PUSG</span>
         <ul>
-          <li> <Link className={props.divLi} to='/'>{props.link1}</Link> </li>
-          <li> <Link className={props.divLi} to='/services'>{props.link2}</Link> </li>
-          <li> <Link className={props.divLi } to='/contact'>{props.link3}</Link> </li>
-          <li> <Link className={props.divLi} to='/Gallery'>{props.link4}</Link> </li>
+          <li> <Link className={props.divLi} to='/'>Home</Link> </li>
+          <li> <Link className={props.divLi} to='/services'>Services</Link> </li>
+          <li> <Link className={props.divLi } to='/contact'>Contact</Link> </li>
+          <li> <Link className={props.divLi} to='/Gallery'>Gallery</Link> </li>
+          <li> <Link className={props.divLi} to='/news'>News</Link> </li>
+          <li> <Link className={props.divLi} to='/about'> About</Link> </li>
         </ul>
 
 

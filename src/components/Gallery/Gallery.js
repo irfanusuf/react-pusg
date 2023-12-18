@@ -1,61 +1,80 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './Gallery.css';
-const PexelsGallery = () => {
-    const apiKey = 'A18L6UPAOtZeFZ4vLDzj2fO4wTeto2iIb2aqtyo2EA3agRXRdEN6YFRV';
-    const [photos, setPhotos] = useState([]);
-    const [loading, isLoading] = useState(true);
-    const [error, isError] = useState("");
 
-    const page = 1;
-    const fetchPhotos = async () => {
+const PexelsGallery = () => {
+    const apiKey = process.env.REACT_APP_GALLERY_API_KEY;
+    const [photos, setPhotos] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
+    const [page, setPage] = useState(1);
+
+    const fetchPhotos = useCallback(async () => {
         try {
+            setLoading(true);
             const response = await axios.get(
-                `https://api.pexels.com/v1/curated?per_page=100&page=${page}`,
+                `https://api.pexels.com/v1/curated?per_page=9&page=${page}`,
                 {
                     headers: {
                         Authorization: apiKey,
                     },
                 }
             );
-            console.log(response.data.photos);
             setPhotos(response.data.photos);
+        } catch (error) {
+            setLoading(false);
+            setError(error.message);
         }
-        catch (error) {
-            isLoading(false)
-            console.log('Error fetching photos:', error);
-            isError(error);
+    }, [ page]);
+
+    const handleNext = () => {
+        setPage(page + 1);
+    };
+
+    const handlePrevious = () => {
+        if (page > 1) {
+            setPage(page - 1);
         }
     };
 
     useEffect(() => {
         fetchPhotos();
-    }, [apiKey]);
-
+    }, [fetchPhotos]);
 
     return (
-
         <div className='gallery'>
-            <div className='error-message'>  <p> {error !== "" && "Something Went Wrong"} </p> </div>
+            <div className='error-message'>
+                <p>{error !== "" && "Something Went Wrong"}</p>
+            </div>
             <h1>Pexels Gallery</h1>
-            {loading ? <div className='cards' >
-                {photos.slice(0, 9).map(photo => (
-                    <div key={photo.id} className='card'   >
-                        <img
-                            src={photo.src.medium}
-                            alt={photo.photographer}
-                        />
-                        <p>Photo by {photo.photographer}</p>
-                    </div>
-                ))}
-            </div> : "Loading Error ......"}
-            
-            <form method='post'>
+            <div>
+                <button onClick={handlePrevious}>Previous</button>
+                <button onClick={handleNext}>Next</button>
+            </div>
 
-                <input type='number' placeholder='Enter Page number' name='page' />
-                <button type='submit'  > next</button>
-            </form>
+           
+                <input
+                    type='number'
+                    placeholder='Enter Page number'
+                    name='page'
+                    value={page}
+                    onChange={(e) => setPage(e.target.value)}
+                />
+            {loading ? (
+                <div className='cards'>
+                    {photos.map((photo) => (
+                        <div key={photo.id} className='card'>
+                            <img src={photo.src.medium} alt={photo.photographer} />
+                            <p>Photo by {photo.photographer}</p>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                "Loading Error ......"
+            )}
+
+         
+              
         </div>
     );
 };

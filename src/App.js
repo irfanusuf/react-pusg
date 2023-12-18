@@ -7,6 +7,7 @@ import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Gallery from "./components/Gallery/Gallery";
+import NewsComponent from "./components/News/News";
 
 
 export const myContext = createContext();
@@ -72,6 +73,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
 
 
+            <Route path="/news" element={<NewsComponent/>} />
             <Route path="/about" element={<About />} />
           </Routes>
 

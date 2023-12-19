@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './News.css';
-
+import logo from '../../assets/game (1).jpg';
 const NewsComponent = () => {
     const apiKey = process.env.REACT_APP_NEWS_API_KEY;
     const [articles, setArticles] = useState([]);
@@ -9,23 +9,27 @@ const NewsComponent = () => {
     const [error, setError] = useState('');
     const [page, setPage] = useState(1);
 
-    const fetchNews = async () => {
-        try {
-            setLoading(true);
-            const response = await axios.get(
-                `https://newsapi.org/v2/top-headlines?country=in&pageSize=5&page=${page}`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${apiKey}`,
-                    },
-                }
-            );
-            setArticles(response.data.articles);
-        } catch (error) {
-            setLoading(false);
-            setError(error.message);
+    const fetchNews =  useCallback (
+        async () => {
+            try {
+                setLoading(true);
+                const response = await axios.get(
+                    `https://newsapi.org/v2/top-headlines?country=in&pageSize=20&page=${page}`,
+                    {
+                        headers: {
+                            Authorization: `Bearer ${apiKey}`,
+                        },
+                    }
+                );
+                setArticles(response.data.articles);
+                console.log(response.data)
+            } catch (error) {
+                setLoading(false);
+                setError(error.message);
+            }
         }
-    };
+    , [apiKey,page])
+      
 
     const handleNext = () => {
         setPage(page + 1);
@@ -39,16 +43,17 @@ const NewsComponent = () => {
 
     useEffect(() => {
         fetchNews();
-    }, [apiKey, page]);
+    }, [fetchNews]);
 
     return (
-        <div>
+        <div className='news-Component' >
             <h1>Top News Headlines</h1>
             {loading ? (
-                <div>
+                <div className='main-news' >
                     {articles.map((article) => (
-                        <div key={article.title}>
-                            <h2>{article.title}</h2>
+                        <div className='news' key={article.title}>
+                            <img src= {article.urlToImage} alt= {logo} />
+                            <span>{article.title}</span>
                             <p>{article.description}</p>
                             <a href={article.url} target="_blank" rel="noopener noreferrer">
                                 Read more

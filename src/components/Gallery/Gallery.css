@@ -40,3 +40,27 @@ text-align: center;
 }
 
 
+
+.header-button{
+    display: flex;
+    justify-content: center;
+}
+
+.header-button button{
+    margin-left: 10px ;
+}
+
+.number-dial{
+    display: flex;
+    justify-content: center;
+
+}
+
+.number-dial input{
+ width: 30px;
+
+}
+
+
+
+

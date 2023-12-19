@@ -30,7 +30,7 @@ const PexelsGallery = () => {
             setError(error.message);
             console.log("Error :", error.code);
         }
-    }, [page]);
+    }, [apiKey,page]);
 
     const handleNext = () => {
         setPage(page + 1);

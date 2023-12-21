@@ -1,8 +1,6 @@
 .light-nav {
     display: flex;
     background-color: rgb(239, 234, 234);
-
-    
     height: 70px;
 }
 
@@ -14,25 +12,7 @@
    height: 70px;
 }
 
-
-nav ul {
-
-   display: flex;
-   list-style-type: none;
-   margin-left: 100px ;
-}
-
-
-nav li {
-   margin-left: 50px ;
-   font-size: 22px;
-   transition: all 0.3s ease-in-out;
-  
-}
- nav li:hover {
-   transform: scale(1.1);
- }
-  nav span{
+nav span{
    position: absolute;
    top: 10px;
    left: 40px;
@@ -47,10 +27,19 @@ nav li {
  }
 
 
+nav ul {
+
+   display: flex;
+   list-style-type: none;
+   margin-left: 120px ;
+}
+
 .nav-li {
    text-decoration: none;
    color: black;
    transition: all 0.3s ease-in-out;
+   margin-left: 20px;
+   font-size: 18px;
 }
 
 
@@ -58,7 +47,10 @@ nav li {
    text-decoration: none;
    color: rgb(226, 221, 221);
    transition: all 0.3s ease-in-out;
+   margin-left: 20px;
+   font-size: 18px;
 }
+
 
 .nav-li-dark:hover  {
   
@@ -71,6 +63,7 @@ nav li {
 }
 
 .nav-form{ 
+   display: flex;
    position: absolute;
    right:20px;
    top: 25px;
@@ -79,8 +72,8 @@ nav li {
 
 
 .nav-form input {
-   background-color: rgba(250, 235, 215, 0.233);
-   width: 300px;
+   background-color: rgb(247, 247, 247);
+   width: 200px;
    margin-right: 10px;
    font-size: 16px;
    padding: 2px 10px;
@@ -98,11 +91,11 @@ nav li {
 
 
 .nav-form button {
-   background-color: rgba(250, 235, 215, 0.233);
+   background-color: rgb(255, 255, 255);
    margin-left: 10px;
    border-radius: 5px;
    transition: all 0.5s ease-in;
-   width: 80px;
+   width: 100px;
    padding: 2px 5px;
    font-size: 16px;
 }
@@ -114,22 +107,7 @@ nav li {
 
 
 
-.btn-dark-mode {
-   background-color: rgba(250, 235, 215, 0.233);
-   margin-left: 100px;
-   border-radius: 5px;
-   transition: all 0.5s ease-in;
-   width: 100px;
-   padding: 2px 5px;
-   font-size: 16px;
-   height: 40px;
-   margin-top: 10px;
-}
 
-.btn-dark-mode:hover{
-   transform: scale(1.05);
-   box-shadow: 2px 2px 10px red;
-}
 
 
 @media only screen and (max-width: 800px) {
@@ -141,8 +119,6 @@ nav li {
    }
 
 
-   nav { 
-      height: 200px;
-   }
+ 
    
  }

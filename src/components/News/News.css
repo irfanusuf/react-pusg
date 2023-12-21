@@ -1,14 +1,13 @@
 .news-Component h1 {
-color: black;
+  color: black;
 
 }
 
 
-.news{
-padding: 10px;
+.news {
+  padding: 10px;
   width: 400px;
-  border-radius: 10px;
-  border: 2px solid black ;
+
   height: 500px;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -17,7 +16,7 @@ padding: 10px;
 }
 
 
-.news p{
+.news p {
   color: black;
 }
 
@@ -30,10 +29,10 @@ padding: 10px;
 }
 
 
-.main-news{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+.main-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 

@@ -1,0 +1,27 @@
+.news-content  h1 {
+    color: black;
+    margin: 5px 200px;
+    text-align: center;
+    
+
+}
+
+
+.news-content div {
+
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.news-content p {
+    margin: 5px 200px;
+    text-align: center;
+}
+
+.internal-image  img {
+width: 600px;
+}
+
+

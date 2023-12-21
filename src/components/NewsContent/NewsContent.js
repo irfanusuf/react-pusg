@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './News.css';
+import './NewsContent.css';
 import logo from '../../assets/game (1).jpg';
-const NewsComponent = () => {
+
+
+const NewsContent = () => {
     const apiKey = process.env.REACT_APP_NEWS_API_KEY;
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -47,16 +48,20 @@ const NewsComponent = () => {
     }, [fetchNews]);
 
     return (
-        <div className='news-Component' >
-            <h1>Top News Headlines</h1>
+        <div className='' >
             {loading ? (
-                <div className='main-news' >
+                <div className='news-content-main' >
                     {articles.map((article) => (
-                        <div className='news' key={article.title}>
-                            <img src= {article.urlToImage} alt= {logo} />
-                            <span>{article.title}</span>
-                            <p>{article.title}</p>
-                              <Link to='/news-Content'> Readmore....</Link>
+                        <div className='news-content' key={article.title}>
+
+                                 <h1>{article.title} </h1>
+
+                                 <div className='internal-image'> <img src= {article.urlToImage} alt= {logo} /></div>  
+
+                                       <p>{article.content} </p>
+                            
+                        
+                             
                             <hr />
                         </div>
                     ))}
@@ -75,4 +80,4 @@ const NewsComponent = () => {
     );
 };
 
-export default NewsComponent;
+export default NewsContent;
